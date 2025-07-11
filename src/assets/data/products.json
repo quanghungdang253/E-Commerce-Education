@@ -1,0 +1,86 @@
+[
+  {
+    "id": 0,
+    "name": "Tiếng Anh giao tiếp cơ bản",
+    "price": 450000,
+    "image": "/images/english-basic.jpg",
+    "shortDesc": "Học các mẫu câu thông dụng, phản xạ nhanh"
+  },
+  {
+      "id": 1,
+    "name": "Luyện nói tiếng Anh với người bản xứ",
+    "price": 1200000,
+    "image": "/images/english-speaking-native.jpg",
+    "shortDesc": "Thực hành trực tiếp với người bản xứ"
+  },
+  {
+      "id": 2,
+    "name": "Luyện thi IELTS cấp tốc 6.5+",
+    "price": 950000,
+    "image": "/images/ielts-fast-track.jpg",
+    "shortDesc": "Chiến lược làm bài & mẹo thi thực chiến"
+  },
+  {
+      "id": 3,
+    "name": "Tiếng Anh thương mại cho người đi làm",
+    "price": 790000,
+    "image": "/images/business-english.jpg",
+    "shortDesc": "Soạn email, thuyết trình & đàm phán"
+  },
+   {
+      "id": 4,
+    "name": "Tiếng Anh thương mại cho người đi làm",
+    "price": 790000,
+    "image": "/images/business-english.jpg",
+    "shortDesc": "Soạn email, thuyết trình & đàm phán"
+  },
+   {
+      "id": 5,
+    "name": "Tiếng Anh thương mại cho người đi làm",
+    "price": 790000,
+    "image": "/images/business-english.jpg",
+    "shortDesc": "Soạn email, thuyết trình & đàm phán"
+  },
+   {
+      "id": 6,
+    "name": "Tiếng Anh thương mại cho người đi làm",
+    "price": 790000,
+    "image": "/images/business-english.jpg",
+    "shortDesc": "Soạn email, thuyết trình & đàm phán"
+  },
+   {
+      "id": 7,
+    "name": "Tiếng Anh thương mại cho người đi làm",
+    "price": 790000,
+    "image": "/images/business-english.jpg",
+    "shortDesc": "Soạn email, thuyết trình & đàm phán"
+  },
+   {
+      "id": 8,
+    "name": "Tiếng Anh thương mại cho người đi làm",
+    "price": 790000,
+    "image": "/images/business-english.jpg",
+    "shortDesc": "Soạn email, thuyết trình & đàm phán"
+  },
+   {
+      "id": 9,
+    "name": "Tiếng Anh thương mại cho người đi làm",
+    "price": 790000,
+    "image": "/images/business-english.jpg",
+    "shortDesc": "Soạn email, thuyết trình & đàm phán"
+  },
+   {
+      "id": 10,
+    "name": "Tiếng Anh thương mại cho người đi làm",
+    "price": 790000,
+    "image": "/images/business-english.jpg",
+    "shortDesc": "Soạn email, thuyết trình & đàm phán"
+  },
+   {
+      "id": 11,
+    "name": "Tiếng Anh thương mại cho người đi làm",
+    "price": 790000,
+    "image": "/images/business-english.jpg",
+    "shortDesc": "Soạn email, thuyết trình & đàm phán"
+  }
+]

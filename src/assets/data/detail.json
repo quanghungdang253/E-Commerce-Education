@@ -1,0 +1,87 @@
+[
+  {
+    "id": 0,
+    "name": "Tiếng Anh giao tiếp cơ bản",
+    "price": 450000,
+    "image": "/images/english-basic.jpg",
+    "shortDesc": "Học các mẫu câu thông dụng, phản xạ nhanh",
+    "fullDesc": "Khoá học dành cho người mới bắt đầu làm quen với tiếng Anh giao tiếp. Bạn sẽ được học các mẫu câu đơn giản, luyện phản xạ tình huống và kỹ năng nghe - nói cơ bản. Phù hợp với người đi làm, học sinh, sinh viên muốn bắt đầu học tiếng Anh hiệu quả.",
+    "rating": 4.5,
+    "duration": "12 buổi (6 tuần)",
+    "instructor": "Nguyễn Văn A - Giảng viên ĐH Ngoại ngữ",
+    "syllabus": [
+      "Chào hỏi và giới thiệu bản thân",
+      "Hỏi đường, mua sắm, ăn uống",
+      "Cách phản xạ trong hội thoại thông thường",
+      "Ngữ điệu, trọng âm trong giao tiếp"
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Luyện nói tiếng Anh với người bản xứ",
+    "price": 1200000,
+    "image": "/images/english-speaking-native.jpg",
+    "shortDesc": "Thực hành trực tiếp với người bản xứ",
+    "fullDesc": "Khoá học giúp bạn nâng cao kỹ năng nói thông qua việc trò chuyện với người bản ngữ. Học viên sẽ được luyện nói theo chủ đề thực tế, sửa lỗi phát âm, nâng cao phản xạ và tự tin giao tiếp. Phù hợp với người đã có nền tảng tiếng Anh cơ bản.",
+    "rating": 4.8,
+    "duration": "10 buổi (5 tuần)",
+    "instructor": "Mr. John Smith - Native speaker from USA",
+    "syllabus": [
+      "Giới thiệu bản thân và small talk",
+      "Trình bày quan điểm, thảo luận nhóm",
+      "Phản xạ trong các tình huống thường gặp",
+      "Thực hành phỏng vấn, hội thoại chuyên ngành"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Luyện nói tiếng Anh nâng cao",
+    "price": 1500000,
+    "image": "/images/english-speaking-advanced.jpg",
+    "shortDesc": "Nâng cao phản xạ và giao tiếp học thuật",
+    "fullDesc": "Khoá học giúp bạn nâng cao khả năng giao tiếp học thuật và thuyết trình bằng tiếng Anh. Học viên sẽ luyện cách sử dụng cấu trúc phức tạp và phong cách nói chuyên nghiệp trong môi trường học tập và làm việc quốc tế.",
+    "rating": 4.9,
+    "duration": "14 buổi (7 tuần)",
+    "instructor": "Ms. Linda – Chuyên gia đào tạo IELTS",
+    "syllabus": [
+      "Thuyết trình học thuật",
+      "Tranh luận nhóm và phản biện",
+      "Cách diễn đạt ý tưởng phức tạp",
+      "Luyện phát âm nâng cao"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Tiếng Anh phỏng vấn xin việc",
+    "price": 980000,
+    "image": "/images/english-job-interview.jpg",
+    "shortDesc": "Chuẩn bị tốt cho các buổi phỏng vấn quốc tế",
+    "fullDesc": "Khoá học tập trung vào kỹ năng trả lời phỏng vấn bằng tiếng Anh, bao gồm các câu hỏi phổ biến, cách xây dựng câu trả lời thuyết phục và luyện tập tình huống thực tế.",
+    "rating": 4.7,
+    "duration": "8 buổi (4 tuần)",
+    "instructor": "Mr. Tom Lee – HR Coach tại Singapore",
+    "syllabus": [
+      "Câu hỏi giới thiệu bản thân",
+      "Trả lời câu hỏi tình huống",
+      "Luyện tập phỏng vấn thực tế",
+      "Ngôn ngữ hình thể và phong thái tự tin"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Tiếng Anh giao tiếp cho người đi làm",
+    "price": 1100000,
+    "image": "/images/english-office.jpg",
+    "shortDesc": "Thành thạo tiếng Anh trong môi trường công sở",
+    "fullDesc": "Khoá học giúp người đi làm cải thiện kỹ năng giao tiếp trong công việc: email, thuyết trình, gọi điện, họp hành,... Nội dung thực tiễn, áp dụng được ngay.",
+    "rating": 4.6,
+    "duration": "10 buổi (5 tuần)",
+    "instructor": "Ms. Anna – Giảng viên kinh nghiệm tại Úc",
+    "syllabus": [
+      "Soạn email chuyên nghiệp",
+      "Giao tiếp trong các buổi họp",
+      "Thuyết trình và báo cáo",
+      "Giao tiếp qua điện thoại và chat"
+    ]
+  }
+]

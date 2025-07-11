@@ -1,7 +1,7 @@
 // components/Header.jsx
 import React from 'react';
 import { FaBookOpen } from 'react-icons/fa';
-
+import NavigationHeader from './components/navigation-header';
 import { Link } from 'react-router-dom';
 export default function Header({
   valueInput,
@@ -57,7 +57,7 @@ export default function Header({
             <option value="high">Cao (&gt; 1tr)</option>
           </select>
         </div>
-
+        <NavigationHeader />
       </div>
     </header>
   );
