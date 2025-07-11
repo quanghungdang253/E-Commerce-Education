@@ -3,6 +3,7 @@ import React from 'react';
 import { FaBookOpen } from 'react-icons/fa';
 import NavigationHeader from './components/navigation-header';
 import { Link } from 'react-router-dom';
+import Input from '../../ui/input';
 export default function Header({
   valueInput,
   setValueInput,
@@ -40,7 +41,7 @@ export default function Header({
         </div>
      
         <div className="flex gap-2 w-full sm:w-auto">
-          <input
+          <Input
             type="text"
             value={valueInput}
             onChange={(e) => setValueInput(e.target.value)}

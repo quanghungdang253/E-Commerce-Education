@@ -35,8 +35,6 @@ const useFetchCourses = (url = "/data/products.json") => {
     },[url])
 
     return {courses,loading, error};
-
-
 }
 
 export default useFetchCourses;

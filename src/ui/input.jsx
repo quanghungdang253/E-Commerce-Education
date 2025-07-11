@@ -29,11 +29,9 @@ function Input({ type, value, onChange, placeholder }) {
         placeholder={placeholder}
         onClick={handleRipple}
         className="
-         w-[20em]
+          w-[20em]
           px-4
           py-3
-          text-base
-          text-gray-700
           backdrop-blur-md
           border border-gray-300
           rounded-xl
@@ -46,6 +44,7 @@ function Input({ type, value, onChange, placeholder }) {
           placeholder-gray-400
           overflow-hidden
           relative
+        text-black
         "
       />
     </div>
