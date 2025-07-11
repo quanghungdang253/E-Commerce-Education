@@ -5,6 +5,7 @@ import { FaBookOpen } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 export default function Header({
   valueInput,
+  setValueInput,
   priceMoney,
   setPriceMoney,
 }) {
@@ -42,7 +43,7 @@ export default function Header({
           <input
             type="text"
             value={valueInput}
-        
+            onChange={(e) => setValueInput(e.target.value)}
             placeholder="Bạn muốn tìm khóa học nào"
           />
           <select
