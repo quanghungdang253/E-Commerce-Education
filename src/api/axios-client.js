@@ -17,16 +17,14 @@ axiosClient.interceptors.request.use(
         function(error){   
                  return Promise.reject(error);
         }
-
 )
-
 axiosClient.interceptors.response.use(function(response){
         return response.data;   // trả về dữ liệu 
 }, function(error){
             if(error.response){
                 const status = error.response.status;
                          if (status === 400) {
-    alert("400: Yêu cầu của Client không hợp lệ.");
+               alert("400: Yêu cầu của Client không hợp lệ.");
   } else if (status === 401) {
     alert("401: Thiếu thông tin xác thực hoặc token không hợp lệ.");
   } else if (status === 403) {
