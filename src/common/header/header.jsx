@@ -13,9 +13,9 @@ export default function Header({
   return (
     <header className="
             bg-gradient-to-r
-          from-blue-500
-          via-purple-500
-          to-pink-500
+          from-blue-800
+          via-purple-600
+          to-blue-600
             p-4 mb-4
            shadow-md
           text-white

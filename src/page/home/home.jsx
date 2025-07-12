@@ -55,7 +55,7 @@ function Home() {
             />
        <div className="
             max-w-[1280px]
-            mx-auto px-4 py-8
+            mx-auto px-4 py-0
        
        "> 
        {loading && <TopLoadingBar />}
