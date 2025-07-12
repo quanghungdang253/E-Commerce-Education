@@ -1,11 +1,12 @@
 import React from "react"
-
+import ChatBotLocal from "./chat/components/local-chat-bot";
 import { Route, Routes } from "react-router-dom"
 import routers from './routers/router';
 function App() {
 
 
   return (
+    <>   
     <Routes>
         {
              routers.map((item) => (
@@ -14,6 +15,8 @@ function App() {
         }
 
     </Routes>
+      
+    </>
   )
 }
 

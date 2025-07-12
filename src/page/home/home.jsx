@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Header  from '../../common/header/header';
 import TopLoadingBar from '../../ui/loading';
 import ProductList from './components/product-list';
+import MainChatBot from '../../chat/main-chat-bot';
 import useFetchCourses from '../../hooks/useFetchCourses';
 function Home() {
   const {value,loading, error} = useFetchCourses();
@@ -67,6 +68,7 @@ function Home() {
         }
        
                              </div>
+                             <MainChatBot />
         </div>
     );
 }

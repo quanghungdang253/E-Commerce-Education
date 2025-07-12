@@ -123,10 +123,17 @@ const { listLike, listCourse } = useSelector((state) => state.useFavorite);
                                  onClick={() => handleClick(item.id)}
                             >
                                 <button
-                                    className="absolute top-3 right-3 text-2xl text-gray-300 hover:text-red-500 transition"
+                                    className="absolute
+                                               top-1 right-1
+                                               text-2xl text-gray-300
+                                              hover:text-red-500 transition"
                                     onClick={(e) => handleFavorite(item.id, e)}
                                     >  
-                                     <FontAwesomeIcon icon={faHeart}  style={{ color: listLike.includes(item.id) ? 'red' : 'white' }}  />
+                                     <FontAwesomeIcon
+                                         icon={faHeart}
+                                         style={{ color: listLike.includes(item.id) ? 'red' : 'blue' }} 
+                                         className='h-6'
+                                     />
                                 
                                 </button>
                                 <img
@@ -141,7 +148,12 @@ const { listLike, listCourse } = useSelector((state) => state.useFavorite);
                   Giá: {item.price.toLocaleString()}đ
                 </p>
               </div>
-              <div className="absolute bottom-0 right-0 pr-4 pb-4 text-red-500 font-bold">
+              <div className="
+                    absolute bottom-0 right-0
+                     p-2 text-black-500
+                    font-bold bg-orange-600 text-[12px]
+                "
+                >
                     Xem chi tiết
               </div>
 

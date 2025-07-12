@@ -6,7 +6,7 @@ import useCoursesSlice from '../features/course/courses-slice';
 const store = configureStore({
     reducer: {
          courses: useCoursesSlice,
-         useFavorite: useFavorite
+          useFavorite: useFavorite
     }
 });
 
