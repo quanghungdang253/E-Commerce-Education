@@ -26,9 +26,10 @@ console.log("searchQuery : " + searchQuery);
   },[dispatch, products.length]);
 
 
-  const filterProduct = products.filter((item) =>  listCourse.includes(item.id));
-console.log("mảng dữ liệu sau khi lọc là "+ filterProduct);
+  
+
   useEffect(() => {
+    const filterProduct = products.filter((item) =>  listCourse.includes(item.id));
             const text = searchQuery.toLowerCase();
             const filter = filterProduct.filter((item) => {
                  const Name = item.name.toLowerCase().includes(text);
@@ -49,7 +50,7 @@ console.log("mảng dữ liệu sau khi lọc là "+ filterProduct);
                    return Name && Price;
             })
 setFilteredLiked(filter);
-  },[searchQuery, priceFilter ,filterProduct]);
+  },[searchQuery, priceFilter,products ,listCourse]);
 
   const handleFavorite = (id,e) => {
          e.stopPropagation();
@@ -68,10 +69,10 @@ console.log("dữ liệu nhận được là " + filteredLiked);
     return (
         <div>
     <Header
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        priceFilter={priceFilter}
-        setPriceFilter={setPriceFilter}
+        valueInput={searchQuery}
+        setValueInput={setSearchQuery}
+        priceMoney={priceFilter}
+        setPriceMoney={setPriceFilter}
       />
           <div className="max-w-[1280px] mx-auto px-4">
                 {

@@ -63,10 +63,10 @@ function FavoriteProduct() {
     return (
         <div>
                 <Header
-                    searchQuery={searchQuery}
-                    setSearchQuery={setSearchQuery}
-                    priceFilter={priceFilter}
-                    setPriceFilter={setPriceFilter}
+                    valueInput={searchQuery}
+                    setValueInput={setSearchQuery}
+                    priceMoney={priceFilter}
+                    setPriceMoney={setPriceFilter}
                 />
                 <div className="max-w-[1280px] mx-auto px-4">
                     {
