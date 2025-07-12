@@ -7,6 +7,8 @@ import Header from '../../common/header/header';
 import TopLoadingBar from '../../ui/loading';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import ProductDetailModal from '../home/components/product-detail-modal';
+import useFetchCourseDetail from '../../hooks/useFetchCourseDetail';
 function FavoriteProduct() {
     const dispatch = useDispatch();
     const {listLike} = useSelector((state) => state.useFavorite);
@@ -15,7 +17,9 @@ function FavoriteProduct() {
       const [searchQuery, setSearchQuery] = useState('');
   const [priceFilter, setPriceFilter] = useState('');
   const [filteredLiked, setFilteredLiked] = useState([]);
-
+  const [selectedId, setSelectedId] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { course: selectedProduct, loading: loadingModal } = useFetchCourseDetail(selectedId);
 
   useEffect(() => {
         if(products.length === 0) {
@@ -53,6 +57,11 @@ function FavoriteProduct() {
     e.stopPropagation();
     dispatch(toggleLike(productId));
   };
+    const handleProductClick = (productId) => {
+    setSelectedId(productId);
+    setIsModalOpen(true);
+  };
+
     if (loading) {
         return <TopLoadingBar />;
 
@@ -80,6 +89,7 @@ function FavoriteProduct() {
                                               <div
                                               key={item.id}
                                                 className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition cursor-pointer relative"
+                                                     onClick={() => handleProductClick(item.id)}
                                             >
                                         <button
                                              onClick={(e) => handleToggleFavorite(item.id, e)}
@@ -104,6 +114,14 @@ function FavoriteProduct() {
                     }
 
                 </div> 
+                  {isModalOpen && (
+        <ProductDetailModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          course={selectedProduct}
+          loading={loadingModal}
+        />
+      )}
         </div>
     );
 }
