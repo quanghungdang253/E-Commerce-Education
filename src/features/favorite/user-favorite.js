@@ -50,8 +50,8 @@ const useBehaviorCourse = createSlice({
       const id = Number(action.payload);
                 console.log(id);
 
-      state.viewCourse = state.viewCourse.filter(item => item !== id);
-      localStorage.setItem('listCourse', JSON.stringify(state.viewCourse));
+      state.listCourse = state.listCourse.filter(item => item !== id);
+      localStorage.setItem('listCourse', JSON.stringify(state.listCourse));
     }
   }
 });

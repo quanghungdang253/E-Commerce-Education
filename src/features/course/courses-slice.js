@@ -4,7 +4,7 @@ import axios from 'axios';
 
  const fetchCourses = createAsyncThunk('courses/fetchCourses', async () => {
   const responseData = await axios.get('/data/products.json');
-  console.log(responseData.data);
+  console.log("Dữ liệu nhận được là " + responseData.data);
   return responseData.data;
 });
 
@@ -33,5 +33,5 @@ const coursesSlice = createSlice({
       });
   }
 });
-
+export {fetchCourses};
 export default coursesSlice.reducer;
