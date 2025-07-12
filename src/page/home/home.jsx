@@ -3,9 +3,10 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import Header  from '../../common/header/header';
 import TopLoadingBar from '../../ui/loading';
+import ProductList from './components/product-list';
 import useFetchCourses from '../../hooks/useFetchCourses';
 function Home() {
-  const {courses,loading, error} = useFetchCourses();
+  const {value,loading, error} = useFetchCourses();
   const [searchQuery, setSearchQuery] = useState('');
   const [priceFilter, setPriceFilter] = useState('');
   const [filteredCourses, setFilterCourses] = useState([]);
@@ -13,17 +14,19 @@ function Home() {
     useEffect(() => {
     const keyword = searchQuery.toLowerCase();
 
-    const filtered = courses.filter((item) => {
+    const filtered = value.filter((item) => {
       const matchesKeyword = item.name.toLowerCase().includes(keyword);
 
       let matchesPrice = true;
       if (priceFilter === 'low') {
              matchesPrice = item.price < 500000;
       }
-      else if (priceFilter === 'medium') {
-             matchesPrice = item.price >= 500000 && item.price <= 1000000;
+
+         else if (priceFilter === 'medium') {
+                      matchesPrice = item.price >= 500000 && item.price <= 1000000;
       } 
-      else if (priceFilter === 'high') {
+
+          else if (priceFilter === 'high') {
             matchesPrice = item.price > 1000000;
       } 
 
@@ -31,7 +34,7 @@ function Home() {
     });
 
     setFilterCourses(filtered);
-  }, [courses, searchQuery, priceFilter]);
+  }, [value, searchQuery, priceFilter]);
 
   
     return (
@@ -49,6 +52,21 @@ function Home() {
                priceMoney={priceFilter}
                setPriceMoney={setPriceFilter}
             />
+       <div className="
+            max-w-[1280px]
+            mx-auto px-4 py-8
+       
+       "> 
+       {loading && <TopLoadingBar />}
+        {error && <p className="text-red-500">
+                Lỗi khi tải dữ liệu.
+        </p>}
+        {!loading && !error && <ProductList products={filteredCourses} />
+        
+        
+        }
+       
+                             </div>
         </div>
     );
 }
