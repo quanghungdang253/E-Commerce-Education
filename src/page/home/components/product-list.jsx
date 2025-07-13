@@ -20,19 +20,19 @@ function ProductList({products}) {
      }
      const handleFavorite = (id, e) =>  {
          e.stopPropagation();
-         const handleLike = listLike.includes(id);
-         dispatch(toggleLike(id));
+                 const handleLike = listLike.includes(id);
+                dispatch(toggleLike(id));
 
          if(!handleLike){
-                toast.success("Đã yêu thích khóa học ");
+                              toast.success("Đã yêu thích khóa học ");
          }else {
-                 toast.info("Đã hủy yêu thích khóa học");
-         }
+                             toast.info("Đã hủy yêu thích khóa học");
+          }
      }
      const handleRemove = (id, e) => {
-          e.stopPropagation();
-          dispatch(removeView(id));
-          dispatch(toggleLike(id));
+                  e.stopPropagation();
+                     dispatch(removeView(id));
+                  dispatch(toggleLike(id));
      }
     
 const { listLike, listCourse } = useSelector((state) => state.useFavorite);
