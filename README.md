@@ -18,7 +18,7 @@ Link demo: https://e-commerce-education.vercel.app/
 + React Loader Spinner
 
 ** Tính năng: 
-
++ Giỏ hàng: Sữa và Xóa
 + Hiển thị danh sách 
 + Tìm kiếm và lọc dữ liệu
 + Gợi ý thông minh (Phần gợi ý sản phẩm hoạt động như một "giỏ hàng nhẹ", nơi người dùng có thể thêm và xoá sản phẩm họ quan tâm.)
@@ -43,8 +43,11 @@ Link demo: https://e-commerce-education.vercel.app/
 ** Tác giả :
 
 Họ và tên: Đặng Quang Hùng
+
 Email: quanghungdang253@gmail.com
+
 Github: https://github.com/quanghungdang253
+
 linkedin: https://www.linkedin.com/in/dang-quang-hung/
 
 
