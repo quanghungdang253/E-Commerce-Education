@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHome, FaBookOpen, FaHeart } from 'react-icons/fa';
+import { FaHome, FaBookOpen, FaHeart ,  FaShoppingCart } from 'react-icons/fa';
 import NavLinkItem from '../../../ui/nav-link';
 const  NavigationHeader = () => {
     return (
@@ -13,6 +13,11 @@ const  NavigationHeader = () => {
              <NavLinkItem 
                 to="/Favorite" icon={FaHeart} label="Khóa học yêu thích"
              />
+               <NavLinkItem 
+                       to="/Cart" 
+                       icon={FaShoppingCart} 
+                         label="Giỏ hàng"
+            />
         </nav>
     );
 }

@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addView,toggleLike,removeView } from '../../../features/favorite/user-favorite';
 import useFetchCourseDetail from '../../../hooks/useFetchCourseDetail';
 import ProductDetailModal from './product-detail-modal';
+import { faShoppingCart, faTrash } from '@fortawesome/free-solid-svg-icons';
+
+import { addCart,removeCart } from '../../../features/cart/cart-slice';
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { faLightbulb, faXmark , faHeart} from '@fortawesome/free-solid-svg-icons';
@@ -37,7 +40,8 @@ function ProductList({products}) {
      }
     
 const { listLike, listCourse } = useSelector((state) => state.useFavorite);
-
+const listCart = useSelector((state) => state.cart.items);
+const isInCart = (id) => listCart.some((item) => item.id === id);
   const  productSuggestions = products.filter((product) => 
             listLike.includes(product.id) || listCourse.includes(product.id)
  )
@@ -168,6 +172,38 @@ const { listLike, listCourse } = useSelector((state) => state.useFavorite);
                       <p className="text-indigo-600 font-bold mt-2">
                   Giá: {item.price.toLocaleString()}đ
                 </p>
+
+<button
+  onClick={(e) => {
+                 e.stopPropagation();
+    if (isInCart(item.id)) {
+      dispatch(removeCart(item.id));
+      toast.info("Đã xóa khỏi giỏ hàng");
+    } else {
+                 dispatch(addCart(item));
+                  toast.success("Đã thêm vào giỏ hàng");
+    }
+  }}
+  className={`mt-2 flex items-center gap-2 px-3 py-1 rounded ${
+    isInCart(item.id)
+                 ? "bg-red-100 text-red-600 hover:bg-red-200"
+                     : "bg-green-100 text-green-600 hover:bg-green-200"
+  } text-sm transition`}
+>
+        <FontAwesomeIcon icon={isInCart(item.id) ? faTrash : faShoppingCart} />
+                {isInCart(item.id) ? "Xóa khỏi giỏ" : "Thêm vào giỏ"}
+</button>
+
+
+
+
+
+
+
+
+
+
+
               </div>
               <div className="
                     absolute bottom-0 right-0

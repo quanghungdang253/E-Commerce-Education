@@ -18,6 +18,7 @@ function Home() {
     const keyword = searchQuery.toLowerCase();
 
     const filtered = value.filter((item) => {
+      
       const matchesKeyword = item.name.toLowerCase().includes(keyword);
 
       let matchesPrice = true;
@@ -45,8 +46,8 @@ function Home() {
                 relative
                 min-h-screen
                 bg-gradient-to-br
-              from-white
-              to-slate-200 
+                from-white
+                to-slate-200 
                 animate-gradient-move
                 bg-[length:400%_400%] 
         ">

@@ -9,8 +9,8 @@ function NavLinkItem({ to, icon: Icon, label }) {
     const ripple = document.createElement('span');
     const rect = e.currentTarget.getBoundingClientRect();
 
-    ripple.className = 'ripple';
-    ripple.style.left = `${e.clientX - rect.left}px`;
+         ripple.className = 'ripple';
+       ripple.style.left = `${e.clientX - rect.left}px`;
        ripple.style.top = `${e.clientY - rect.top}px`;
 
     const button = rippleRef.current;
