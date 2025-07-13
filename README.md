@@ -27,18 +27,25 @@ Link demo: https://e-commerce-education.vercel.app/
 + Chatbot local
 
 
-** cách cài đặt và chạy dự án 
+** cách cài đặt và chạy dự án:
+
 + Mở terminal trên máy 
 + Gõ git clone https://github.com/quanghungdang253/E-Commerce-Education.git
+
 ** Cài đặt dependencies:
+
 + npm install(nếu dùng yarn thì yarn install)
 ** Chạy dự án
+
 + npm run dev
 
+
 ** Tác giả :
+
 Họ và tên: Đặng Quang Hùng
 Email: quanghungdang253@gmail.com
 Github: https://github.com/quanghungdang253
+linkedin: https://www.linkedin.com/in/dang-quang-hung/
 
 
 
