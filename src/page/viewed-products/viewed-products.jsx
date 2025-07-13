@@ -29,7 +29,13 @@ console.log("searchQuery : " + searchQuery);
   },[dispatch, products.length]);
 
 
-  
+    useEffect(() => {
+       window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+           
+       })
+  },[])
 
   useEffect(() => {
     const filterProduct = products.filter((item) =>  listCourse.includes(item.id));

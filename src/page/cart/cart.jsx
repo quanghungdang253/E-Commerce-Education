@@ -4,7 +4,13 @@ import { removeCart } from '../../features/cart/cart-slice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 function Cart() {
-
+useEffect(() => {
+     window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+         
+     })
+},[])
     let getItem = useSelector((state) => state.cart.items);
     console.log("dữ liệu nhân được là " + getItem); 
     const dispatch = useDispatch();

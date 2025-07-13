@@ -13,7 +13,13 @@ function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [priceFilter, setPriceFilter] = useState('');
   const [filteredCourses, setFilterCourses] = useState([]);
-
+  useEffect(() => {
+       window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+           
+       })
+  },[])
     useEffect(() => {
     const keyword = searchQuery.toLowerCase();
 

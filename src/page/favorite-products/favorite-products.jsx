@@ -5,6 +5,7 @@ import { toggleLike } from '../../features/favorite/user-favorite';
 import {fetchCourses} from '../../features/course/courses-slice';
 import Header from '../../common/header/header';
 import TopLoadingBar from '../../ui/loading';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import ProductDetailModal from '../home/components/product-detail-modal';
@@ -21,6 +22,13 @@ function FavoriteProduct() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { course: selectedProduct, loading: loadingModal } = useFetchCourseDetail(selectedId);
 
+    useEffect(() => {
+       window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+           
+       })
+  },[])
   useEffect(() => {
         if(products.length === 0) {
             dispatch(fetchCourses());
@@ -69,6 +77,7 @@ function FavoriteProduct() {
   if (error) {
      return <p className="text-red-500">Lỗi khi tải dữ liệu: {error}</p>;
   }
+
     return (
         <div>
                 <Header
