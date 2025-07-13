@@ -12,6 +12,7 @@ function ProductList({products}) {
     const [index, setIndex] = useState(0);
     const [modal,setModal] = useState(false);
      const [showSuggestions, setShowSuggestions] = useState(false);
+     
      const { course, loading } = useFetchCourseDetail(index);
      const handleClick = (id) => {
             setIndex(id);

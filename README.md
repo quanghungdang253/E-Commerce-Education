@@ -21,7 +21,7 @@ Link demo: https://e-commerce-education.vercel.app/
 
 + Hiển thị danh sách 
 + Tìm kiếm và lọc dữ liệu
-+ Gợi ý thông minh (AI)
++ Gợi ý thông minh (Phần gợi ý sản phẩm hoạt động như một "giỏ hàng nhẹ", nơi người dùng có thể thêm và xoá sản phẩm họ quan tâm.)
 + Modal chi tiết sản phẩm
 + Yêu thích 
 + Chatbot local
