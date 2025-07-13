@@ -38,8 +38,8 @@ function NavLinkItem({ to, icon: Icon, label }) {
       text-white
     "
     >
-      <Icon className="text-xl" />
-      <span>{label}</span>
+      <Icon className="hidden sm:block" />
+          <span className='text-[14px]'>{label}</span>
 
       {/* Ripple style injected inline */}
       <style jsx="true">{`

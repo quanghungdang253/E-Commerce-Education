@@ -6,7 +6,7 @@ import Header from '../../common/header/header';
 import TopLoadingBar from '../../ui/loading';
 import { toggleLike } from '../../features/favorite/user-favorite';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+
 import ProductDetailModal from '../home/components/product-detail-modal';
 import useFetchCourseDetail from '../../hooks/useFetchCourseDetail';
 function ViewProduct() {
@@ -65,8 +65,6 @@ setFilteredLiked(filter);
          e.stopPropagation();
          dispatch(toggleLike(id));
   }
-
-
 if(loading) {
     return <TopLoadingBar/>;
 }
@@ -83,7 +81,7 @@ console.log("dữ liệu nhận được là " + filteredLiked);
         priceMoney={priceFilter}
         setPriceMoney={setPriceFilter}
       />
-          <div className="max-w-[1280px] mx-auto px-4">
+          <div className="max-w-[1280px] mx-auto px-4 min-h-[1000px]">
                 {
                     filteredLiked.length === 0 ? (
                             <p className="text-gray-500 mt-6">Không có sản phẩm nào phù hợp với tìm kiếm.</p>
@@ -91,8 +89,8 @@ console.log("dữ liệu nhận được là " + filteredLiked);
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                                 {filteredLiked.map((item) => (
                                       <div
-                key={item.id}
-                className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition cursor-pointer relative"
+                   key={item.id}
+                  className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition cursor-pointer relative"
                   onClick={() => handleProductClick(item.id)}
 
 
@@ -101,7 +99,6 @@ console.log("dữ liệu nhận được là " + filteredLiked);
                         onClick={(e) => handleFavorite(item.id, e)}
                         className="absolute top-3 right-3 text-2xl text-red-500"
                      >   
-
                      </button>
                            <img 
                                 src={item.image} 
@@ -114,25 +111,23 @@ console.log("dữ liệu nhận được là " + filteredLiked);
                                <p className="text-sm text-gray-600">
                                         {item.shortDesc}  
                               </p>
-                         <p className="text-indigo-600 font-bold mt-2">
-                                 Giá: {item.price.toLocaleString()}đ
-                         </p>
-              </div>
+                              <p className="text-indigo-600 font-bold mt-2">
+                                        Giá: {item.price.toLocaleString()}đ
+                              </p>
+                     </div>
                                 ))}
 
                             </div>
                     )
                 }
-
-
           </div>
            {isModalOpen && (
-        <ProductDetailModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          course={selectedProduct}
-          loading={loadingModal}
-        />
+              <ProductDetailModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                course={selectedProduct}
+                loading={loadingModal}
+          />
       )}
 
         </div>

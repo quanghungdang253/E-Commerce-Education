@@ -1,12 +1,26 @@
-# React + Vite
+Frontend - Test
+Ecommerce education platform: Sàn giáo dục thương mại điện tử 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Đây là một bài test dự án giao diện Front-end cho sàn giáo dục thương mại điện tử tích hợp AI. Dự án này hướng đến mô phỏng trải nghiệm người dùng thực tế, giúp người học dễ dàng lựa chọn , Lọc, tìm kiếm sản phẩm phù hợp, có gợi ý thông minh (AI), quản lý danh sách yêu thích và xem chi tiết sản phẩm và một số chức năng khác.
 
-Currently, two official plugins are available:
+Link demo: https://e-commerce-education.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+** Công nghệ sử dụng : 
++ React, Vite
++ Tailwind CSS
++ Redux Toolkit
++ React Router DOM
++ React Redux
++ Axios
++ Customs Hook
++ React Loader Spinner
 
-## Expanding the ESLint configuration
+** Tính năng: 
++ Hiển thị danh sách 
++ Tìm kiếm và lọc dữ liệu
++ Gợi ý thông minh (AI)
++ Modal chi tiết sản phẩm
++ Yêu thích 
++ Chatbot local
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+

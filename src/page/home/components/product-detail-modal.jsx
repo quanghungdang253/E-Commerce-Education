@@ -6,8 +6,26 @@ import TopLoadingBar from '../../../ui/loading';
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 transition-opacity duration-300">
-                    <div className="bg-gradient-to-br from-white via-slate-100 to-slate-200 rounded-xl shadow-2xl overflow-hidden max-w-3xl w-full relative animate-fade-in transform scale-95 max-h-[100vh] overflow-y-auto">
+    <div className="
+          fixed inset-0
+         bg-black bg-opacity-60 
+          flex items-center justify-center
+          z-50 transition-opacity duration-300
+         overflow-scroll
+         
+          "
+      >
+                    <div className="
+                        bg-gradient-to-br
+                       from-white via-slate-100
+                       to-slate-200 rounded-xl
+                        shadow-2xl overflow-hidden 
+                        max-w-3xl w-full relative
+                       animate-fade-in transform
+                       scale-95 max-h-[100vh] 
+                       overflow-y-auto
+                        sm: mt-10
+                       ">
         
         <button
                   onClick={onClose}
@@ -21,18 +39,19 @@ import TopLoadingBar from '../../../ui/loading';
 
         {!loading && (
           <div className="flex flex-col">
-            {/* Ảnh ở trên */}
+     
+            
             <div className="w-full bg-white flex items-center justify-center p-4">
               <img
                 src={course.image}
                 alt={course.name}
-                className="rounded-xl w-full h-auto max-h-[350px] object-cover shadow-md"
+                className="rounded-xl w-full h-auto max-h-[350px] object-cover shadow-md lg: mt-10"
               />
             </div>
 
-            {/* Nội dung chia 2 cột */}
+      
             <div className="px-6 pb-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Cột trái - Thông tin khóa học */}
+        
               <div className="space-y-4">
                 <h2 className="text-2xl font-bold text-indigo-700">{course.name}</h2>
                 <p className="text-gray-700">{course.fullDesc}</p>
@@ -56,7 +75,7 @@ import TopLoadingBar from '../../../ui/loading';
                 </div>
               </div>
 
-              {/* Cột phải - Nội dung khóa học */}
+           
               <div className="relative">
                 <h3 className="text-lg 
                                 font-semibold mb-2
@@ -68,11 +87,12 @@ import TopLoadingBar from '../../../ui/loading';
               ))}
 </ul>
 
-                <p className="text-xl font-bold text-red-600 mt-2 absolute right-0 bottom-0">
-                  Giá: {course.price.toLocaleString()}vnđ
-                </p>
+               
               </div>
             </div>
+             <p className="text-xl font-bold text-red-600 mt-2 absolute  xl:right-1 xl:bottom-1 ">
+                     Giá: {course.price.toLocaleString()}vnđ
+                </p>
           </div>
         )}
       </div>

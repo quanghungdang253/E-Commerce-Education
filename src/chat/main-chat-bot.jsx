@@ -7,10 +7,19 @@ function MainChatBot() {
 const [closeBot , setCloseBot] = useState(false);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-1 right-1 z-50">
       <button
         onClick={() => setCloseBot(true)}
-        className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg transition duration-300 active:opacity-50"
+        className="flex 
+              items-center
+              space-x-2
+             bg-blue-600
+             hover:bg-blue-700
+             text-white px-4 
+              py-2 rounded-full
+             shadow-lg transition 
+             duration-300 
+             active:opacity-50"
       >
        
           <img

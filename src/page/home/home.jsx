@@ -6,6 +6,7 @@ import TopLoadingBar from '../../ui/loading';
 import ProductList from './components/product-list';
 import MainChatBot from '../../chat/main-chat-bot';
 import useFetchCourses from '../../hooks/useFetchCourses';
+import Footer from '../../common/footer/footer';
 function Home() {
   const {value,loading, error} = useFetchCourses();
   const [searchQuery, setSearchQuery] = useState('');
@@ -40,6 +41,7 @@ function Home() {
   
     return (
         <div className="
+                relative
                 min-h-screen
                 bg-gradient-to-br
               from-white
@@ -69,6 +71,8 @@ function Home() {
        
                              </div>
                              <MainChatBot />
+                             
+                     
         </div>
     );
 }

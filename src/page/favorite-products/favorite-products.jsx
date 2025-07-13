@@ -77,7 +77,7 @@ function FavoriteProduct() {
                     priceMoney={priceFilter}
                     setPriceMoney={setPriceFilter}
                 />
-                <div className="max-w-[1280px] mx-auto px-4">
+                <div className="max-w-[1280px] mx-auto px-4 min-h-[1000px]">
                     {
                         filteredLiked.length === 0 ? (
                              <p className="text-gray-500 mt-6">Không có sản phẩm nào phù hợp với tìm kiếm.</p>
@@ -122,6 +122,7 @@ function FavoriteProduct() {
           loading={loadingModal}
         />
       )}
+      
         </div>
     );
 }

@@ -37,7 +37,7 @@ export default function Header({
         ">
                <FaBookOpen className="text-white" />
               <Link to="/">    
-                        <span className='text-white'>EduCourses</span>
+                        <span className='text-white'>Antoree</span>
                   </Link>
         </div>
      

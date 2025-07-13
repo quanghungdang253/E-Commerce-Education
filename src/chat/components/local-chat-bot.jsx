@@ -67,7 +67,7 @@ console.log("data messeage "+ message);
 
   return (
     
-<div className="fixed bottom-20 right-6 z-50 w-full max-w-md">
+<div className="fixed bottom-20 right-0 z-50 w-full max-w-md">
       <div className="
             bg-white shadow-xl 
               rounded-lg 

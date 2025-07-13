@@ -77,10 +77,11 @@ const { listLike, listCourse } = useSelector((state) => state.useFavorite);
                                                     >
                                                     <button
                                                         className="
-                                                            absolute top-3
-                                                            right-3 text-xs
+                                                            absolute top-1
+                                                            right-1
+                                                            text-xs
                                                           bg-red-100 text-red-600
-                                                            rounded-full px-2 hover:bg-red-200
+                                                            rounded-full px-2 py-1  hover:bg-red-200
                                                         "
                                                         onClick={(e) => handleRemove(product.id,e)}
                                                         title='Xóa khỏi gợi ý '
@@ -119,7 +120,12 @@ const { listLike, listCourse } = useSelector((state) => state.useFavorite);
                         {products.map((item) => (
                             <div
                                 key={item.id}
-                                 className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition relative cursor-pointer"
+                                 className="
+                                    bg-white shadow-md
+                                      rounded-lg overflow-hidden
+                                      hover:shadow-xl
+                                      transition relative
+                                       cursor-pointer"
                                  onClick={() => handleClick(item.id)}
                             >
                                 <button

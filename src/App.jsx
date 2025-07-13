@@ -2,11 +2,12 @@ import React from "react"
 import ChatBotLocal from "./chat/components/local-chat-bot";
 import { Route, Routes } from "react-router-dom"
 import routers from './routers/router';
+import Footer from "./common/footer/footer";
 function App() {
 
 
   return (
-    <>   
+    <React.Fragment>   
     <Routes>
         {
              routers.map((item) => (
@@ -15,8 +16,10 @@ function App() {
         }
 
     </Routes>
-      
-    </>
+    <div className='mt-6 '>   
+                             <Footer />
+              </div>
+    </React.Fragment>
   )
 }
 
