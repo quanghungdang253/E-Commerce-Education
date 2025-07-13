@@ -56,6 +56,8 @@ export default function Header({
   value={priceMoney}
    onChange={(e) => setPriceMoney(e.target.value)}
   className="
+  text-[16px]
+  text-center
     border px-1 py-1
      text-black rounded-2xl
     transition duration-300
@@ -63,10 +65,10 @@ export default function Header({
     focus:ring-2 focus:ring-blue-400
    focus:border-blue-500 hover:shadow-lg"
 >
-  <option value="" className="">Tất cả mức giá</option>
-    <option value="low">Thấp (&lt; 500k)</option>
-  <option value="medium">Trung bình (500k - 1tr)</option>
-  <option value="high">Cao (&gt; 1tr)</option>
+        <option value="" className="">Tất cả mức giá</option>
+        <option value="low">Thấp (&lt; 500k)</option>
+        <option value="medium">Trung bình (500k - 1tr)</option>
+        <option value="high">Cao (&gt; 1tr)</option>
 </select>
 
         </div>

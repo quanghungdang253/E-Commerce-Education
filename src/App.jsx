@@ -3,6 +3,7 @@ import ChatBotLocal from "./chat/components/local-chat-bot";
 import { Route, Routes } from "react-router-dom"
 import routers from './routers/router';
 import Footer from "./common/footer/footer";
+import LoadingSkeleton from "./ui/loading-skeleton";
 function App() {
 
 
@@ -18,6 +19,7 @@ function App() {
     </Routes>
     <div className='mt-6 '>   
                              <Footer />
+                          
               </div>
     </React.Fragment>
   )

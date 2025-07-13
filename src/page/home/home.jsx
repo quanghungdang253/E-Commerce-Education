@@ -6,6 +6,7 @@ import TopLoadingBar from '../../ui/loading';
 import ProductList from './components/product-list';
 import MainChatBot from '../../chat/main-chat-bot';
 import useFetchCourses from '../../hooks/useFetchCourses';
+import LoadingSkeleton from '../../ui/loading-skeleton';
 import Footer from '../../common/footer/footer';
 function Home() {
   const {value,loading, error} = useFetchCourses();
@@ -60,7 +61,7 @@ function Home() {
             mx-auto px-4 py-0
        
        "> 
-       {loading && <TopLoadingBar />}
+       {loading && <LoadingSkeleton />}
         {error && <p className="text-red-500">
                 Lỗi khi tải dữ liệu.
         </p>}

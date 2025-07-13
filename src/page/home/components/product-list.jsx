@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addView,toggleLike,removeView } from '../../../features/favorite/user-favorite';
 import useFetchCourseDetail from '../../../hooks/useFetchCourseDetail';
 import ProductDetailModal from './product-detail-modal';
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import { faLightbulb, faXmark , faHeart} from '@fortawesome/free-solid-svg-icons';
 function ProductList({products}) {
     const dispatch = useDispatch();
@@ -18,7 +20,14 @@ function ProductList({products}) {
      }
      const handleFavorite = (id, e) =>  {
          e.stopPropagation();
+         const handleLike = listLike.includes(id);
          dispatch(toggleLike(id));
+
+         if(!handleLike){
+                toast.success("Đã yêu thích khóa học ");
+         }else {
+                 toast.info("Đã hủy yêu thích khóa học");
+         }
      }
      const handleRemove = (id, e) => {
           e.stopPropagation();
@@ -31,6 +40,9 @@ const { listLike, listCourse } = useSelector((state) => state.useFavorite);
   const  productSuggestions = products.filter((product) => 
             listLike.includes(product.id) || listCourse.includes(product.id)
  )
+
+
+   
     return (
         <div className="mt-6">
         <button
@@ -45,7 +57,6 @@ const { listLike, listCourse } = useSelector((state) => state.useFavorite);
         >  
            <FontAwesomeIcon icon={faLightbulb} />  Gợi ý sản phẩm
         </button>
-
         {
          showSuggestions && (
                 <div> 
@@ -54,7 +65,6 @@ const { listLike, listCourse } = useSelector((state) => state.useFavorite);
                          className="mb-4 bg-gray-300 hover:bg-gray-400 text-black px-3 py-1 rounded ml-3"
                         
                     >
-
                          <FontAwesomeIcon icon={faXmark} style={{color: "#eb0017",}} />    Ẩn gợi ý 
                     </button>
                         <h2 className="text-lg font-semibold text-indigo-700 mt-4 mb-2">
@@ -133,7 +143,11 @@ const { listLike, listCourse } = useSelector((state) => state.useFavorite);
                                                top-1 right-1
                                                text-2xl text-gray-300
                                               hover:text-red-500 transition"
-                                    onClick={(e) => handleFavorite(item.id, e)}
+                                    onClick={(e) => {
+                                             handleFavorite(item.id, e)
+                                           
+                                         } 
+                                    }
                                     >  
                                      <FontAwesomeIcon
                                          icon={faHeart}
@@ -147,10 +161,10 @@ const { listLike, listCourse } = useSelector((state) => state.useFavorite);
                                     alt={item.name}
                                     className="w-full h-40 object-cover"
                                 />
- <div className="p-4">
-                <h3 className="font-semibold text-lg">{item.name}</h3>
-                <p className="text-sm text-gray-600">{item.shortDesc}</p>
-                <p className="text-indigo-600 font-bold mt-2">
+            <div className="p-4">
+                     <h3 className="font-semibold text-lg">{item.name}</h3>
+                        <p className="text-sm text-gray-600">{item.shortDesc}</p>
+                      <p className="text-indigo-600 font-bold mt-2">
                   Giá: {item.price.toLocaleString()}đ
                 </p>
               </div>
@@ -165,10 +179,17 @@ const { listLike, listCourse } = useSelector((state) => state.useFavorite);
 
                             </div>
                         ))}
-
                      </div>
             )
         }
+           <ToastContainer
+                position="top-right"
+                autoClose={3000} // 3 giây tự tắt
+                hideProgressBar={false}
+                closeOnClick
+                pauseOnHover
+                draggable
+          />
         {
             modal && (
                 <ProductDetailModal

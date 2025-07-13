@@ -11,7 +11,7 @@ function NavLinkItem({ to, icon: Icon, label }) {
 
     ripple.className = 'ripple';
     ripple.style.left = `${e.clientX - rect.left}px`;
-    ripple.style.top = `${e.clientY - rect.top}px`;
+       ripple.style.top = `${e.clientY - rect.top}px`;
 
     const button = rippleRef.current;
     button.appendChild(ripple);
@@ -36,6 +36,7 @@ function NavLinkItem({ to, icon: Icon, label }) {
       hover:text-green-500
       transition-all duration-300 group
       text-white
+      font
     "
     >
       <Icon className="hidden sm:block" />
