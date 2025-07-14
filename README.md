@@ -50,7 +50,9 @@ Github: https://github.com/quanghungdang253
 
 linkedin: https://www.linkedin.com/in/dang-quang-hung/
 
-
+ảnh demo 
+![Trang chủ](./screenshots/Screenshot%20(1374).png)
+![Trang chủ](./screenshots/Screenshot%20(1375).png)
 
 
 

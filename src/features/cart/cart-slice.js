@@ -49,7 +49,6 @@ const cart = createSlice({
                 state.items = [];
                 saveData([]);
         }
-
     }
 })
 

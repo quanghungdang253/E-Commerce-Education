@@ -17,7 +17,7 @@ function NavLinkItem({ to, icon: Icon, label }) {
     button.appendChild(ripple);
 
     setTimeout(() => {
-      ripple.remove();
+            ripple.remove();
     }, 800);
   };
 
