@@ -40,7 +40,7 @@ function NavLinkItem({ to, icon: Icon, label }) {
     "
     >
       <Icon className="hidden sm:block" />
-          <span className='text-[14px]'>{label}</span>
+          <span className='text-[14px] font-bold'>{label}</span>
 
       {/* Ripple style injected inline */}
       <style jsx="true">{`
